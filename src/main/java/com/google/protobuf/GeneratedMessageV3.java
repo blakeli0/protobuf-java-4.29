@@ -335,15 +335,6 @@ public abstract class GeneratedMessageV3
      * change (5.x). Users should update gencode to >= 4.26.x which no longer overrides this method.
      */
     @Deprecated
-    <T> boolean hasExtension(GeneratedExtension<MessageT, T> extension);
-
-    /* Removed from GeneratedMessage.ExtendableMessageOrBuilder in
-     * https://github.com/protocolbuffers/protobuf/commit/94a2a448518403341b8aa71335ab1123fbdcccd8
-     *
-     * @deprecated This method is deprecated, and slated for removal in the next Java breaking
-     * change (5.x). Users should update gencode to >= 4.26.x which no longer overrides this method.
-     */
-    @Deprecated
     <T> int getExtensionCount(GeneratedExtension<MessageT, List<T>> extension);
 
     /* Removed from GeneratedMessage.ExtendableMessageOrBuilder in
@@ -387,18 +378,6 @@ public abstract class GeneratedMessageV3
     @Deprecated
     protected ExtendableMessage(ExtendableBuilder<MessageT, ?> builder) {
       super(builder);
-    }
-
-    /* Removed from GeneratedMessage.ExtendableMessage in
-     * https://github.com/protocolbuffers/protobuf/commit/94a2a448518403341b8aa71335ab1123fbdcccd8
-     *
-     * @deprecated This method is deprecated, and slated for removal in the next Java breaking
-     * change (5.x). Users should update gencode to >= 4.26.x which no longer overrides this method.
-     */
-    @Deprecated
-    @Override
-    public final <T> boolean hasExtension(final GeneratedExtension<MessageT, T> extension) {
-      return hasExtension((ExtensionLite<MessageT, T>) extension);
     }
 
     /* Removed from GeneratedMessage.ExtendableMessage in
@@ -515,18 +494,6 @@ public abstract class GeneratedMessageV3
     @Deprecated
     protected ExtendableBuilder(BuilderParent parent) {
       super(parent);
-    }
-
-    /* Removed from GeneratedMessage.ExtendableBuilder in
-     * https://github.com/protocolbuffers/protobuf/commit/94a2a448518403341b8aa71335ab1123fbdcccd8
-     *
-     * @deprecated This method is deprecated, and slated for removal in the next Java breaking
-     * change (5.x). Users should update gencode to >= 4.26.x which no longer overrides this method.
-     */
-    @Deprecated
-    @Override
-    public final <T> boolean hasExtension(final GeneratedExtension<MessageT, T> extension) {
-      return hasExtension((ExtensionLite<MessageT, T>) extension);
     }
 
     /* Removed from GeneratedMessage.ExtendableBuilder in

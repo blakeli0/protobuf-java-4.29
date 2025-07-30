@@ -883,6 +883,20 @@ public abstract class GeneratedMessage extends AbstractMessage implements Serial
     /** Check if a singular extension is present. */
     <T> boolean hasExtension(ExtensionLite<? extends MessageT, T> extension);
 
+    /**
+     * hasExtension() overload for {@link Extension} instances. Since {@link Extension} is a subtype
+     * of {@link ExtensionLite}, this is redundant for source-compatibility, but exists here to
+     * maintain ABI compatibility with .class files which dispatch to a method of the concrete type.
+     */
+    default <T> boolean hasExtension(Extension<? extends MessageT, T> extension) {
+      return hasExtension((ExtensionLite<? extends MessageT, T>) extension);
+    }
+
+    /** Overload to maintain ABI compatibility. See {@link #hasExtension(Extension)}. */
+    default <T> boolean hasExtension(GeneratedExtension<? extends MessageT, T> extension) {
+      return hasExtension((ExtensionLite<? extends MessageT, T>) extension);
+    }
+
     /** Get the number of elements in a repeated extension. */
     <T> int getExtensionCount(ExtensionLite<? extends MessageT, List<T>> extension);
 
