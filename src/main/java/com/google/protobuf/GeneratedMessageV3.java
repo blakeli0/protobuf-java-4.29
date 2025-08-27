@@ -441,6 +441,18 @@ public abstract class GeneratedMessageV3
      */
     @Deprecated
     public <T> BuilderT setExtension(
+            final GeneratedExtension<MessageT, T> extension, final T value) {
+      return setExtension((ExtensionLite<MessageT, T>) extension, value);
+    }
+
+    /* Removed from GeneratedMessage.ExtendableBuilder in
+     * https://github.com/protocolbuffers/protobuf/commit/94a2a448518403341b8aa71335ab1123fbdcccd8
+     *
+     * @deprecated This method is deprecated, and slated for removal in the next Java breaking change
+     * (5.x). Users should update gencode to >= 4.26.x which no longer overrides this method.
+     */
+    @Deprecated
+    public <T> BuilderT setExtension(
         final GeneratedExtension<MessageT, List<T>> extension,
         final int index,
         final T value) {
