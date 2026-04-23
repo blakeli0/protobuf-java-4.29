@@ -35269,6 +35269,13 @@ public final class DescriptorProtos {
         } // finally
         return this;
       }
+        public <Type> Builder setExtension(
+                com.google.protobuf.GeneratedMessage.GeneratedExtension<
+                        DescriptorProtos.FieldOptions, Type> extension,
+                Type value) {
+            return super.setExtension(extension, value);
+        }
+
       private int bitField0_;
 
       private int ctype_ = 0;
